@@ -1,0 +1,6 @@
+data.json
+__pycache__/
+*.xlsx
+*.pdf
+*.zip
+__pycache__
