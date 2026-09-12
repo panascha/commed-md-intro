@@ -1,0 +1,8 @@
+0 (None, '#VALUE!', None, 'รายชื่อนักศึกษาโครงการฝึกภาคสนามร่วม มหาวิทยาลัยขอนแก่น ปีการศึกษา 2569\n', None, None, None, None, None, None, '#VALUE!', None)
+1 (None, None, None, 'รายวิชา MD743102 Fundamental of Family and Community Health และ GE153158 Community Ways of Life and Community Learning', None, None, None, None, None, None, None, None)
+2 (None, None, None, None, None, None, None, None, None, None, None, None)
+3 ('ลำดับ', 'ลำดับที่', 'รหัสประจำตัว', 'คำนำหน้า', 'e-mail', 'สาขาวิชา', 'เพศ', 'เขตฝึก', 'บ้านพัก', 'โครงการ', 'วิถีศึกษา', 'ครอบครัว')
+4 (1, 1, '653070018-0', 'นาย ณภัทร ลีนาราช', 'napat.le@kkumail.com', 'MD', 1, 1, 1, 1, 1, 1)
+5 (2, 2, '653070060-1', 'นาย ปาฏิหาริย์ ภูกองไชย', 'patiharn.p@kkumail.com', 'MD', 1, 2, 1, 1, 1, 1)
+6 (3, 3, '653070122-5', 'นาย กรวิชญ์ เอี่ยมกุศลกิจ', 'korawish.e@kkumail.com', 'MD', 1, 3, 1, 1, 1, 1)
+7 (4, 4, '653070149-5', 'นางสาว ชนาพร ชาลีคาร', 'chana_chalee@kkumail.com', 'MD', 2, 1, 3, 2, 1, 3)
