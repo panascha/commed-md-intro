@@ -72,16 +72,14 @@ for row in rows[4:]:
         "branch": branch,
     })
 
-md_only = [s for s in students if s.get("branch") == "MD"]
+md_only = [s for s in students if s.get("branch")]
 print(f"Total rows: {len(students)}")
-print(f"MD students: {len(md_only)}")
+print(f"All branches ({len(md_only)} students):")
+for b in sorted(set(s['branch'] for s in md_only)):
+    print(f"  {b}: {sum(1 for s in md_only if s['branch']==b)}")
 print(f"Zones found: {sorted(set(s['zone'] for s in md_only))}")
-print(f"Houses per zone:")
-for z in sorted(ZONES):
-    zh = [s for s in md_only if s["zone"] == z]
-    print(f"  เขต {z}: {len(zh)} students, houses {sorted(set(s['house'] for s in zh))}")
 
 with open(OUT, "w", encoding="utf-8") as f:
     json.dump({"students": md_only, "zones": ZONES}, f, ensure_ascii=False, indent=2)
 
-sys.stdout.buffer.write(f"\nWrote {len(md_only)} MD students → {OUT}\n".encode('utf-8'))
+sys.stdout.buffer.write(f"\nWrote {len(md_only)} all-branch students → {OUT}\n".encode('utf-8'))
