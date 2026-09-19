@@ -14,6 +14,7 @@
     "Commed OS idea/**/*.md",
     "Commed OS idea/**/*.py",
     "topics/**/*.md",
+    "คู่มือการฝึกภาคสนามร่วมฯ2569.md",
     ".github/**",
     ".gitignore",
     "*_overview.txt"
