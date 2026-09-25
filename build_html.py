@@ -14,6 +14,10 @@ OUT = "index.html"
 with open(SRC_JSON, "r", encoding="utf-8") as f:
     data = json.load(f)
 
+# index.html is public (GitHub Pages) — never embed student emails.
+for s in data["students"]:
+    s.pop("email", None)
+
 with open(SRC_HTML, "r", encoding="utf-8") as f:
     html = f.read()
 
