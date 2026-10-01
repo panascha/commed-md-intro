@@ -186,13 +186,13 @@
 <div class="panel"><h3>ทำอะไรได้บ้าง</h3><ul class="check-list"><li>แผนที่หลังคาจริงออฟไลน์</li><li>บันทึกเยี่ยมบ้าน + ระบุบ้านเลขที่</li><li>ผังเครือญาติ Genogram อัตโนมัติ</li><li>แจ้งเตือนข้อควรระวังหน้างาน ⚠️</li><li>ซิงก์เข้า Google Sheet</li><li>ส่งออก Excel (.xlsx) ทันที</li></ul></div>
 <h3 class="sub">เครื่องมือที่ต้องใช้</h3><div class="cards">
 <div class="card activity"><div class="num">1</div><h3>Google Sheet + Code.gs</h3><p>ฐานข้อมูลของเขต ข้อมูลทุกอย่างเก็บในชีตของเขตเอง</p></div>
-<div class="card activity"><div class="num">2</div><h3>Netlify Drop</h3><p>โฮสต์เว็บฟรี ลากไฟล์ zip วาง (สมัครบัญชีฟรีก่อน)</p></div>
+<div class="card activity"><div class="num">2</div><h3>Netlify Drop</h3><p>โฮสต์เว็บฟรี แตกไฟล์ zip แล้วลากโฟลเดอร์ dist วาง (สมัครบัญชีฟรีก่อน)</p></div>
 <div class="card activity"><div class="num">3</div><h3>เบราว์เซอร์มือถือ</h3><p>Chrome หรือ Safari ไม่ต้องติดตั้งแอปเพิ่ม</p></div>
 </div>
 <h3 class="sub">เริ่มใช้ใน 3 ขั้นตอน</h3><div class="timeline">
 <div class="event"><div class="event-date">ขั้นที่ 1</div><div><h3>ดาวน์โหลดแพ็กเกจประจำเขต</h3><p>เลือกไฟล์ <code>zone-X.zip</code> ของเขตตัวเองจากปุ่มด้านล่าง</p></div></div>
 <div class="event"><div class="event-date">ขั้นที่ 2</div><div><h3>ตั้งฐานข้อมูล</h3><p>สร้าง Google Sheet ใหม่ → วาง <code>Code.gs</code> → Deploy เป็น Web App (Execute as: Me, Access: Anyone)</p></div></div>
-<div class="event"><div class="event-date">ขั้นที่ 3</div><div><h3>นำเว็บขึ้นออนไลน์และแชร์ลิงก์</h3><p>ลากไฟล์ zip วางที่ <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a> → เติม <code>?gas=&lt;URL_EXEC&gt;&amp;openExternalBrowser=1</code> ต่อท้ายที่อยู่เว็บ แล้วส่งเข้ากลุ่ม LINE</p></div></div>
+<div class="event"><div class="event-date">ขั้นที่ 3</div><div><h3>นำเว็บขึ้นออนไลน์และแชร์ลิงก์</h3><p>แตกไฟล์ zip แล้วลากเฉพาะโฟลเดอร์ <code>dist</code> ไปวางที่ <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a> → เติม <code>?gas=&lt;URL_EXEC&gt;&amp;openExternalBrowser=1</code> ต่อท้ายที่อยู่เว็บ แล้วส่งเข้ากลุ่ม LINE</p></div></div>
 </div>
 <h3 class="sub">ดาวน์โหลดแพ็กเกจ</h3><div class="zones">
 <a class="zone-dl" href="downloads/zone-1.zip" download>เขต 1<small>zone-1.zip</small></a>
@@ -212,7 +212,7 @@
 <li><strong><a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a></strong> — หน้าเว็บคุยกับ AI (Gemini) รองรับข้อมูลขนาดใหญ่ ใช้วิเคราะห์บั๊กและเขียนโค้ดแก้</li>
 <li><strong><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></strong> — คลังเก็บโค้ดออนไลน์ เก็บประวัติการแก้ไขและแชร์กับทีม</li>
 <li><strong><a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></strong> — โฮสต์เว็บฟรี เชื่อมกับ GitHub พอโค้ดเปลี่ยน เว็บอัปเดตเอง</li>
-<li><strong><a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a></strong> — โฮสต์เว็บฟรีอีกทางหนึ่ง ลากโฟลเดอร์หรือไฟล์ zip วางที่ <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> ได้เว็บทันที ไม่ต้องใช้ GitHub</li>
+<li><strong><a href="https://www.netlify.com" target="_blank" rel="noopener">Netlify</a></strong> — โฮสต์เว็บฟรีอีกทางหนึ่ง ลากโฟลเดอร์เว็บ (เช่น dist) วางที่ <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">Netlify Drop</a> ได้เว็บทันที ไม่ต้องใช้ GitHub</li>
 </ol><p style="margin:14px 0 0"><strong style="color:var(--navy)">ขั้นตอนการทำงาน</strong></p><ol>
 <li>รวมโค้ด: เปิด Terminal รัน <code>npx repomix</code> ได้ไฟล์รวมโค้ดทั้งโปรเจกต์</li>
 <li>สั่ง AI แก้: แนบไฟล์ Repomix ใน Google AI Studio แล้วบอกปัญหาที่ต้องการแก้</li>
