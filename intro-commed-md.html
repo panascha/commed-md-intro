@@ -220,6 +220,11 @@
 <li>ปรับปรุงไฟล์: เปิด VS Code นำโค้ดที่ AI แก้มาวางทับและเซฟ</li>
 <li>บันทึกงาน: ใช้ Terminal รัน <code>git add</code>, <code>git commit</code>, <code>git push</code> ส่งโค้ดขึ้น GitHub</li>
 <li>ออนไลน์ทันที: Vercel ดึงโค้ดล่าสุดจาก GitHub ไปสร้างเว็บให้อัตโนมัติ</li>
+</ol><p style="margin:14px 0 0"><strong style="color:var(--navy)">อยากแก้โค้ดของเขตเอง</strong></p><p style="margin:4px 0 0">อ่านไฟล์ <code>คู่มือการแก้ไขโค้ด_สำหรับผู้พัฒนา.md</code> ในไฟล์ zip ของเขต มีแผนผังไฟล์ วิธีเพิ่มประเภทสถานที่ เปลี่ยนสีหลังคา เพิ่มคอลัมน์ข้อมูล และรายการตรวจก่อนนำขึ้นเว็บ ข้อผิดพลาดที่พบบ่อย:</p><ol>
+<li>เพิ่มฟิลด์ในเว็บแต่ไม่เพิ่มใน <code>HEADERS</code> ของ <code>Code.gs</code> — ข้อมูลถูกทิ้งโดยไม่มี error</li>
+<li>แก้ตารางหรือดัชนีใน <code>src/db.ts</code> โดยไม่เพิ่มเวอร์ชัน Dexie — แอปในเครื่องเพื่อน error</li>
+<li>ไม่ทดสอบออฟไลน์หลัง build — บางเครื่องค้างที่โค้ดเก่า</li>
+<li>ไม่รัน <code>npx tsc --noEmit</code> และไม่ดู Console ก่อนลาก <code>dist</code> ขึ้น Netlify</li>
 </ol></details>
 </div></section>
 </main><footer><div class="wrap"><strong>COMMED 2569</strong><br>Fundamental of Family and Community Health · Community Ways of Life and Community Learning<br>ข้อมูลสรุปจากคู่มือการฝึกภาคสนามร่วมฯ มหาวิทยาลัยขอนแก่น ประจำปี 2569 — ทุกสาขา</div></footer>
